@@ -1,0 +1,37 @@
+name = input("what's your name? ")
+with open("names.txt", "a") as file:
+file.write(f"{name}\n")  # code for file creation and style of writing in file
+
+
+with open("names.txt", "r") as file: #when opening a file to read no need  to specify "r" as it's the default
+    lines = file.readlines()
+#possible to skip line 2 and use "for line in file" straight
+for line in lines:
+    print("hello," , line.rstrip())    
+
+"""names = []
+
+for _ in range(3):
+    names.append(input("what is your name? "))
+
+for name in sorted(names):
+    print(f"hello, {name}")"""
+
+alternative approach to students.py :> this method doesn't use the DictReader, opens file and calls sorted() on it.
+with open("students.csv") as file:
+    for line in sorted(file):
+        name, house = line.rstrip().split(",")
+        print(f"{name} is in {house}")    
+
+
+
+
+def main():
+    b = int(input("enter a base-:"))
+    p = int(input("enter an exponent-:"))
+    print(f"{b} raised to the power of {p} is",expon(b,p))
+
+def expon(x,y):
+    return(x**y)
+
+main()
