@@ -2,7 +2,7 @@
 
 import re
 
-unletter = input("enter a non-letter email :").strip()
+unletter = input("enter a weird email :").strip()
 pattern = r"^\W+@(?:\w+\.com)"
 
 if re.search(pattern, unletter, re.IGNORECASE):
