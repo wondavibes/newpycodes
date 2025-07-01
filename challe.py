@@ -3,7 +3,7 @@ def main():
     Listname = ["BoluNinalowo", "Hakeem", "Buju", "Obaniyi"]
     chrc = input("enter a character :")
     for name in Listname:
-        location = find_index(name, chrc)
+        location = find_index(name, chrc.casefold)
         if location:
             print(f"the letter '{chrc}' is found at indices: '{location}'")
         else:
