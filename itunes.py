@@ -4,7 +4,7 @@ import sys
 
 #if len(sys.argv) != 2:
  #   sys.exit()
-key = input("enter a song title: ")
+key = input("enter a song title here: ")
 response = requests.get("https://itunes.apple.com/search?entity=song&limit=5&term=" + key)
 
 o = response.json()
