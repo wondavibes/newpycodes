@@ -10,9 +10,8 @@ def main():
         print(f"the character '{char}' is not found in the word")
 
 
-def find_index(word, char):
-    index = [i for i, c in enumerate(word) if c == char]
-    return index
+def find_index(word: str, char: str) -> list[int]:
+    return [i for i, c in enumerate(word) if c == char]
 
 
 if __name__ == "__main__":

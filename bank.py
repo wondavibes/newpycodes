@@ -5,6 +5,10 @@ class Acct:
     def __str__(self) :
         return f"Your current account balance is: {self._balance}"
 
+        
+    def __add__(self,other):
+        ...
+
 
 #    @property
 #    def balance(self):
@@ -17,7 +21,6 @@ class Acct:
 
     def withdraw(self, n):
         self._balance -= n
-
 
 def main():
     account = Acct()

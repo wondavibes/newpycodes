@@ -8,13 +8,23 @@ class Senior(Student):
 
 
 class Pupil(Student):
-    def __init__(self,name, house, blouse):
-        self.blouse = blouse
-        super().__init__(name, house)
+    def __init__(self,name,house,sport):
+        self.sport = sport
+        super().__init__(name,house)
+
+    def __str__(self):
+        return f"{self.name} is in {self.house} House playing {self.sport}"
+        
+    @classmethod
+    def fetch(cls):
+        name = input("Name: ") 
+        house = input("House: ")
+        sport =input("Sport: ")
+        return cls(name, house, sport)
 
 
 def main():
-    Isha = Pupil.get()
+    Isha = Pupil.fetch()
     print(Isha)
 
 if __name__ == "__main__":

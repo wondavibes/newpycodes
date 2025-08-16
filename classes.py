@@ -13,7 +13,7 @@ class Student:
         name = input("Name: ") 
         house = input("House: ")
         return cls(name, house)
-
+     
 
 def main():
     student = Student.get()

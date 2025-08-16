@@ -13,6 +13,3 @@ with open("students.csv") as file:
 for student in sorted(students, key=lambda student: student["name"]):
     print(f"{student['name']} is from {student['house']}")
 
-x= 35
-y = 40 
-print(x+y)
