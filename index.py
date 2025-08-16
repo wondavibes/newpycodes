@@ -1,5 +1,5 @@
 def main():
-    word = input("enter a word: ")
+    word: str = input("enter a word: ")
     char = input("enter a character: ")
 
     indices = find_index(word, char)
